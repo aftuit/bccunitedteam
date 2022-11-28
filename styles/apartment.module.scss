@@ -1,0 +1,80 @@
+
+$main-blue: #173e62;
+
+.apartments{
+    padding: 100px 0;
+    margin-top: 80px;
+    .selectGroup{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .select{
+    width: 48%;
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid $main-blue;
+    color: $main-blue;
+    border-radius: 4px;
+    }
+    .apartCard{
+        border: 1px solid $main-blue;
+        border-radius: 4px;
+        .apartCardHeader{
+        padding: 15px;
+        .h2{
+            font-size: 14px;
+            margin: 0;
+        }
+        border-bottom: 1px dotted $main-blue;
+        }
+        .apartCardBody{
+        .priceRow{
+            padding: 15px;
+            border-bottom: 1px dotted $main-blue;
+            margin: 0;
+        }
+        .sizeRow{
+            padding: 15px;
+            border-bottom: 1px dotted $main-blue;
+            margin: 0;
+        }
+        }
+        .apartCardFooter{
+        padding: 10px 20px;
+        .button{
+            background: $main-blue;
+        }
+        }
+    }
+        .items{
+        width: 100%;
+        }
+        .img{
+            border-radius: 30px;
+            height: 480px;
+            width: 100%;
+        }
+        .switch{
+            margin-top: 2rem;
+        }
+    }
+  .lightimg{
+    height: 480px;
+    width: 100%;
+    @media (max-width: 767px) and (min-width: 480px) {
+        margin-top: 40px;
+    }
+  }
+
+.btn{
+    border-radius: 4px;
+    border: none;
+    background: #173E62;
+    color: #fff;
+    padding: 5px 13px;
+    outline: none;
+    &:hover{
+        opacity: 0.8;
+    }
+}

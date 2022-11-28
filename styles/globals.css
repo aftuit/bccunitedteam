@@ -1,26 +1,208 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap');
+
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.css');
+
+:root {
+    --text-orange: #bda588;
+    --text-blue: #173e62;
+    --color-bg: #eaeaea;
+    --color-loader: #222;
+    --loader-size: 100px;
+    --loader-speed: 500ms;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.text-blue{
+    color: var(--text-blue);
+}
+.text-orange{
+    color: var(--text-orange);
 }
 
-* {
-  box-sizing: border-box;
+.font-200{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 200;
+}
+.font-400{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+.font-700{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 700;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+html {
+  scroll-behavior: smooth;
+}
+
+button.slick-arrow{
+    z-index: 12;
+    top: 95%;
+}
+button.slick-arrow::before{
+font-size: 30px;
+font-family: auto;
+color: #173e62;  
+border: 1px solid #173e62;
+padding: 8px 12px;
+}
+button.slick-arrow:hover{
+    background-color: #173e62;
+    color: #fff;}
+    button.slick-arrow::before{
+    background-color: #173e62;
+    color: #fff;
+            }
+button.slick-arrow.slick-prev{
+    left: 51%;
+}
+button.slick-arrow.slick-next{
+    right: 42%;
+}
+
+@media(max-width: 1115px) {
+    button.slick-arrow.slick-next{
+        right: 38%;
+    }
+}
+@media(max-width: 995px) {
+    button.slick-arrow{
+        top: 100% !important;
+    }
+}
+@media(max-width: 767px) {
+    button.slick-arrow.slick-next{
+        right: 25%;
+    }
+    button.slick-arrow.slick-prev{
+        left: 60%;
+    }
+}
+@media(max-width: 590px) {
+    button.slick-arrow.slick-next{
+        right: 20%;
+    }
+    button.slick-arrow{
+        top: 101% !important;
+    }
+}
+
+@media(max-width: 410px) {
+    button.slick-arrow.slick-next{
+        right: 15%;
+    }
+}
+@media(max-width: 320px) {
+    button.slick-arrow.slick-prev{
+        left: 50%;
+    }
+}
+
+
+.loader-wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .loader {
+    --loader-height: calc(var(--loader-size) / 7);
+    display: flex;
+    
+    position: relative;
   }
-  body {
-    color: white;
-    background: black;
+  .loader::before {
+    content: '';
+    position: absolute;
   }
-}
+  .loader::before,
+  .loader > span {
+    display: block;
+    width: var(--loader-height);
+    height: var(--loader-height);
+    border-radius: 50%;
+    background: var(--color-loader);
+    
+    animation-name: to-right;
+    animation-duration: var(--loader-speed);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .loader > span:nth-child(even) {
+    visibility: hidden;
+  }
+  .loader > span:first-child {
+    animation-name: scale-up;
+  }
+  .loader > span:last-child {
+    animation-name: scale-up;
+    animation-direction: reverse;
+  }
+  
+  @keyframes to-right {
+    to {
+      transform: translateX(200%);
+    }
+  }
+  @keyframes scale-up {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .loader {
+    --loader-height: calc(var(--loader-size) / 7);
+    display: flex;
+    
+    position: relative;
+  }
+  .loader::before {
+    content: '';
+    position: absolute;
+  }
+  .loader::before,
+  .loader > span {
+    display: block;
+    width: var(--loader-height);
+    height: var(--loader-height);
+    border-radius: 50%;
+    background: var(--color-loader);
+    
+    animation-name: to-right;
+    animation-duration: var(--loader-speed);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .loader > span:nth-child(even) {
+    visibility: hidden;
+  }
+  .loader > span:first-child {
+    animation-name: scale-up;
+  }
+  .loader > span:last-child {
+    animation-name: scale-up;
+    animation-direction: reverse;
+  }
+  
+  @keyframes to-right {
+    to {
+      transform: translateX(200%);
+    }
+  }
+  @keyframes scale-up {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  

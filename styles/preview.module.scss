@@ -1,0 +1,46 @@
+.previewWrap{
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-top: 80px;
+    position: relative;
+    .rowPreview{
+        margin-top: 2rem;
+        padding: 3.3rem 0;
+        background: {
+            image: url("../public/assets/img/bg-setion.jpg");
+            position: 305px 0;
+            repeat: no-repeat;
+            size: 100% 100%;
+        };
+        .col12{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .prw{
+                height: 500px;
+                display: block;
+                margin: auto 0;
+            }
+        }
+
+
+    }
+}
+    .contur{
+      position: absolute !important;
+      transform: scale(1.1);
+      z-index: -1;
+      opacity: 0.3;
+      right: 1%;
+      top: 0;
+      @media (max-width: 450px) {
+          transform: scale(1);
+          z-index: -1;
+          opacity: 0.3;
+          right: 11%;
+          top: -11px;
+      }
+  
+    
+  }
+
